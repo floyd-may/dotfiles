@@ -3,6 +3,8 @@ filetype off "turn off filetype detection for vundle
 set rtp+=~/.vim/bundle/vundle "add vundle
 call vundle#rc() "start vundle
 Plugin 'guns/vim-clojure-static'
+Plugin 'editorconfig/editorconfig'
+Plugin 'klen/python-mode'
 
 syntax enable "enable syntax highlighting
 filetype on "enable filetype detection
@@ -28,4 +30,7 @@ set softtabstop=4 "4 spaces for tabs in INSERT mode
 set tabstop=4 "4 space for tabs
 set undolevels=1000 "number of changes that can be undone
 colors slate
+
+" filetype plugin forcing
 au BufNewFile,BufRead *.sls set filetype=yml
+au BufNewFile,BufRead *.less set filetype=css
