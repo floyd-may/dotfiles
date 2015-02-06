@@ -34,3 +34,5 @@ colors slate
 " filetype plugin forcing
 au BufNewFile,BufRead *.sls set filetype=yml
 au BufNewFile,BufRead *.less set filetype=css
+
+set guioptions-=T
