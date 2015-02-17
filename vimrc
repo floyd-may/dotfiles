@@ -5,6 +5,7 @@ call vundle#rc() "start vundle
 Plugin 'guns/vim-clojure-static'
 Plugin 'editorconfig/editorconfig'
 Plugin 'klen/python-mode'
+Plugin 'derekwyatt/vim-scala'
 
 syntax enable "enable syntax highlighting
 filetype on "enable filetype detection
