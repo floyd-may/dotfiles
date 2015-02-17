@@ -32,8 +32,11 @@ set tabstop=4 "4 space for tabs
 set undolevels=1000 "number of changes that can be undone
 colors slate
 
+highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
+
 " filetype plugin forcing
 au BufNewFile,BufRead *.sls set filetype=yml
 au BufNewFile,BufRead *.less set filetype=css
 
+" hide toolbar from gui
 set guioptions-=T
