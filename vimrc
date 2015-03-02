@@ -3,7 +3,7 @@ filetype off "turn off filetype detection for vundle
 set rtp+=~/.vim/bundle/vundle "add vundle
 call vundle#rc() "start vundle
 Plugin 'guns/vim-clojure-static'
-Plugin 'editorconfig/editorconfig'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'klen/python-mode'
 Plugin 'derekwyatt/vim-scala'
 
