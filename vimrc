@@ -6,6 +6,8 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'klen/python-mode'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'AndrewRadev/linediff.vim'
+Plugin 'scrooloose/syntastic'
 
 syntax enable "enable syntax highlighting
 filetype on "enable filetype detection
@@ -37,6 +39,18 @@ highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
 " filetype plugin forcing
 au BufNewFile,BufRead *.sls set filetype=yml
 au BufNewFile,BufRead *.less set filetype=css
+
+" remaps ln and lp to move to next & prev markers
+nnoremap <leader>ln :lnext<CR>
+nnoremap <leader>lp :lprev<CR>
+
+" python-mode
+let g:pymode_rope = 0
+let g:pymode_lint = 0
+
+" Syntastic
+let g:syntastic_check_on_open = 1
+let g:syntastic_always_populate_loc_list = 1
 
 " hide toolbar from gui
 set guioptions-=T
