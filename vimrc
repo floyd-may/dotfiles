@@ -37,7 +37,7 @@ colors slate
 highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
 
 " filetype plugin forcing
-au BufNewFile,BufRead *.sls set filetype=yml
+au BufNewFile,BufRead *.sls set filetype=yaml
 au BufNewFile,BufRead *.less set filetype=css
 
 " remaps ln and lp to move to next & prev markers

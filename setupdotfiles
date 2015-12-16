@@ -1,6 +1,6 @@
 #!/bin/bash
 
-excluded_files='setupdotfiles README'
+excluded_files='setupdotfiles README _vimrc_win'
 
 pushd `dirname $0` > /dev/null
 SCRIPT_PATH=`pwd -P`
