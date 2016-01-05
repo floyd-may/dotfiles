@@ -1,0 +1,6 @@
+[log]
+        date = relative
+[format]
+        pretty = format:%C(auto)%h %an %ad %d %<(80,trunc)%s
+[rebase]
+        autostash = true
