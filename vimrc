@@ -8,6 +8,7 @@ Plugin 'klen/python-mode'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'AndrewRadev/linediff.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-cucumber'
 
 syntax enable "enable syntax highlighting
 filetype on "enable filetype detection
@@ -34,7 +35,10 @@ set tabstop=4 "4 space for tabs
 set undolevels=1000 "number of changes that can be undone
 colors slate
 
-highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
+highlight ColorColumn ctermbg=darkgrey guibg=#333333
+
+highlight TrailingSpace ctermbg=red guibg=red
+match TrailingSpace /\s\+$/
 
 " filetype plugin forcing
 au BufNewFile,BufRead *.sls set filetype=yaml
