@@ -1,5 +1,12 @@
 set rtp+=~/dotfiles/vim
+set rtp+=~/dotfiles
 so $HOME/dotfiles/vimrc
 
 so $VIMRUNTIME\mswin.vim
 set clipboard="*
+set directory=.,$TMP,$TEMP
+
+set enc=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
+set guifont=Consolas:h9
