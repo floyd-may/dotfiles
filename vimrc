@@ -2,15 +2,17 @@ set nocompatible "don't be Vi compatible
 filetype off "turn off filetype detection for vundle
 set rtp+=~/.vim/bundle/vundle "add vundle
 call vundle#rc() "start vundle
-Plugin 'guns/vim-clojure-static'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'klen/python-mode'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'AndrewRadev/linediff.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-cucumber'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'vim-scripts/paredit.vim'
+Plugin 'tpope/vim-surround'
 
-syntax enable "enable syntax highlighting
+highlight TrailingSpace ctermbg=red guibg=red
+match TrailingSpace /\s\+$/
+
+syntax on "enable syntax highlighting
 filetype on "enable filetype detection
 filetype plugin on "filetype specific plugins
 filetype indent on "filetype specific indents
@@ -37,24 +39,29 @@ colors slate
 
 highlight ColorColumn ctermbg=darkgrey guibg=#333333
 
-highlight TrailingSpace ctermbg=red guibg=red
-match TrailingSpace /\s\+$/
-
 " filetype plugin forcing
 au BufNewFile,BufRead *.sls set filetype=yaml
 au BufNewFile,BufRead *.less set filetype=css
+au BufNewFile,BufRead *.cmp set filetype=html
+au BufNewFile,BufRead *.ts set filetype=javascript
 
 " remaps ln and lp to move to next & prev markers
 nnoremap <leader>ln :lnext<CR>
 nnoremap <leader>lp :lprev<CR>
 
-" python-mode
-let g:pymode_rope = 0
-let g:pymode_lint = 0
-
-" Syntastic
-let g:syntastic_check_on_open = 1
-let g:syntastic_always_populate_loc_list = 1
-
 " hide toolbar from gui
 set guioptions-=T
+
+function! FontSizePlus ()
+  let l:gf_size_whole = matchstr(&guifont, '\(:h\)\@<=\d\+$')
+  let l:gf_size_whole = l:gf_size_whole + 1
+  let l:new_font_size = ':h'.l:gf_size_whole
+  let &guifont = substitute(&guifont, ':h\d\+$', l:new_font_size, '')
+endfunction
+
+function! FontSizeMinus ()
+  let l:gf_size_whole = matchstr(&guifont, '\(:h\)\@<=\d\+$')
+  let l:gf_size_whole = l:gf_size_whole - 1
+  let l:new_font_size = ':h'.l:gf_size_whole
+  let &guifont = substitute(&guifont, ':h\d\+$', l:new_font_size, '')
+endfunction
