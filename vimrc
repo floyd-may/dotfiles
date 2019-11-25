@@ -6,7 +6,9 @@ Plugin 'AndrewRadev/linediff.vim'
 Plugin 'tpope/vim-cucumber'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'vim-scripts/paredit.vim'
+"Plugin 'vim-scripts/paredit.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'tpope/vim-surround'
 
 highlight TrailingSpace ctermbg=red guibg=red
@@ -43,7 +45,8 @@ highlight ColorColumn ctermbg=darkgrey guibg=#333333
 au BufNewFile,BufRead *.sls set filetype=yaml
 au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.cmp set filetype=html
-au BufNewFile,BufRead *.ts set filetype=javascript
+au BufNewFile,BufRead *.ts set filetype=typescript
+au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 
 " remaps ln and lp to move to next & prev markers
 nnoremap <leader>ln :lnext<CR>
